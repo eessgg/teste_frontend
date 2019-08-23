@@ -1,0 +1,255 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rebeccapurple;
+  color: #071723;
+  font-size: 1rem;
+}
+
+.box {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  width: 650px;
+}
+
+.space {
+  margin-bottom: 16px;
+}
+
+.space-md {
+  margin-bottom: 32px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header {
+  background: url(images/header.png) center right no-repeat;
+  background-size: cover;
+  height: 230px;
+  padding: 23px 36px;
+  width: 100%;
+}
+
+.header .title {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.header .title span {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.46;
+}
+
+.form textarea {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 8px;
+  color: #071723;
+  height: 140px;
+  padding: 16px;
+  resize: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.fieldset {
+  padding: 12px 32px;
+}
+
+.fieldset p {
+  display: flex;
+   margin-bottom: 8px;
+}
+
+.fieldset h3 {
+  padding-bottom: 8px;
+}
+
+.counter {
+  display: flex;
+}
+
+.counter svg {
+  fill: #2f3676;
+  cursor: pointer;
+}
+
+.counter svg:hover {
+  fill: #191847;
+}
+
+
+.counter input {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 8px;
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+}
+
+.footer {
+  padding: 32px;
+  background: #dde3e9;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer .btn {
+  appearance: none;
+  background: #2f3676;
+  border: 2px solid #2f3676;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 32px;
+  height: 50px;
+}
+
+.footer .btn:focus,
+.footer .btn:hover {
+  border: 2px solid #2f3676;
+  background: #191847;
+}
+
+.formMsg {
+  width: 100%;
+  display: none;
+  background: #c5cfd6;
+  color: forestgreen;
+  font-weight: 600;
+}
+
+.success {
+  background: #c5cfd6;
+  color: forestgreen;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.356);
+}
+
+.disabled-div {
+  pointer-events:none;
+}
+
+#spinner {
+  display: none;
+  margin: 24px auto;
+  text-align: center;
+}
+
+
+.errorMsgOutput {
+  background: rgba(255, 0, 0, 0.356);
+  color: red;
+  font-weight: 600;
+  padding: 12px;
+  margin: 12px 0;
+  display: none;
+  transition: all 2s ease-in-out;
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+input[type=checkbox] + label {
+  display: block;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #2f3676;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 24px;
+  max-height: 24px;
+  height: 100%;
+  padding-bottom: 0.4em;
+  margin-right: 0.4em;
+  vertical-align: middle;
+  color: transparent;
+  transition: .1s;
+  background-color: #2f3676;
+  text-align: center;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(1);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: #191847;
+  border: 0.1em solid #191847;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  border: 0.1em solid #aaa;
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  background-color: #bfb;
+  border-color: #bfb;
+}
